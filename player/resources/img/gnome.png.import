@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjpvy0e40dfm2"
-path="res://.godot/imported/gnome.png-9ae5a9f56647fb0eb7f9340efd6dad9d.ctex"
+path="res://.godot/imported/gnome.png-5b5228826369fbf4afb107ea5679ae37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/resources/gnome.png"
-dest_files=["res://.godot/imported/gnome.png-9ae5a9f56647fb0eb7f9340efd6dad9d.ctex"]
+source_file="res://player/resources/img/gnome.png"
+dest_files=["res://.godot/imported/gnome.png-5b5228826369fbf4afb107ea5679ae37.ctex"]
 
 [params]
 

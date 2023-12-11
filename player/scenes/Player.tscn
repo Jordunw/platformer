@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2gcmh7dumwx3"]
 
 [ext_resource type="Script" path="res://world/scripts/Player.gd" id="1_dga1u"]
-[ext_resource type="Texture2D" uid="uid://bjpvy0e40dfm2" path="res://player/resources/gnome.png" id="1_hpvsf"]
 [ext_resource type="Script" path="res://player/scripts/PlayerCamera.gd" id="2_7pxin"]
+[ext_resource type="SpriteFrames" uid="uid://d1j6qnaevpua5" path="res://player/resources/spritesheet/PlayerSpriteFrame.tres" id="2_lue61"]
 [ext_resource type="Texture2D" uid="uid://du1e5wrby4gc3" path="res://world/resources/lighting/light.png" id="3_kr31t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xs67"]
@@ -11,8 +11,10 @@ size = Vector2(14, 26)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_dga1u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hpvsf")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_lue61")
+animation = &"new_animation"
+frame_progress = 0.222752
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8xs67")
