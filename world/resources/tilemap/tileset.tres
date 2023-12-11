@@ -1,0 +1,26 @@
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://f8f215noe6ak"]
+
+[ext_resource type="Texture2D" uid="uid://bf31c2t48nsx0" path="res://world/resources/tilemap/img/dirt.png" id="1_ca7d8"]
+[ext_resource type="Texture2D" uid="uid://cjbl0dv2qw6ik" path="res://world/resources/tilemap/img/grass.png" id="2_dqlic"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_07lfi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0vnp"]
+texture = ExtResource("1_ca7d8")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77iq3"]
+texture = ExtResource("2_dqlic")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_07lfi")
+sources/0 = SubResource("TileSetAtlasSource_s0vnp")
+sources/1 = SubResource("TileSetAtlasSource_77iq3")
