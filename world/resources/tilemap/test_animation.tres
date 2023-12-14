@@ -1,0 +1,14 @@
+[gd_resource type="AnimatedTexture" load_steps=4 format=3 uid="uid://dsnapi75f0ye5"]
+
+[ext_resource type="Texture2D" uid="uid://b4hjd6gi5qtx8" path="res://world/resources/tilemap/img/fan1.png" id="1_8botd"]
+[ext_resource type="Texture2D" uid="uid://cro5ka7o3y7io" path="res://world/resources/tilemap/img/fan2.png" id="2_vrm8m"]
+[ext_resource type="Texture2D" uid="uid://byu3003jlqw2m" path="res://world/resources/tilemap/img/fan3.png" id="3_62r8c"]
+
+[resource]
+frames = 3
+speed_scale = 1.5
+frame_0/texture = ExtResource("1_8botd")
+frame_1/texture = ExtResource("2_vrm8m")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_62r8c")
+frame_2/duration = 1.0

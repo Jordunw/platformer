@@ -1,13 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl3nmqe7x66eu"]
+[gd_scene load_steps=6 format=3 uid="uid://dl3nmqe7x66eu"]
 
 [ext_resource type="PackedScene" uid="uid://c2gcmh7dumwx3" path="res://player/scenes/Player.tscn" id="1_6e8kt"]
 [ext_resource type="Script" path="res://world/scripts/World.gd" id="1_iv0yp"]
 [ext_resource type="PackedScene" uid="uid://dn01lhtu7hmlx" path="res://world/scenes/World1.tscn" id="2_n3cue"]
+[ext_resource type="Script" path="res://world/scripts/TerrainDetector.gd" id="3_oa40h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_au060"]
+size = Vector2(16, 32)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_iv0yp")
 
 [node name="Player" parent="." instance=ExtResource("1_6e8kt")]
 position = Vector2(610, 52)
+
+[node name="TerrainManager" type="Area2D" parent="Player"]
+script = ExtResource("3_oa40h")
+
+[node name="PlayerTile" type="CollisionShape2D" parent="Player/TerrainManager"]
+shape = SubResource("RectangleShape2D_au060")
 
 [node name="TileMap" parent="." instance=ExtResource("2_n3cue")]

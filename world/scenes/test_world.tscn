@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://xfw0j1j67fah"]
+
+[ext_resource type="TileSet" uid="uid://ci26jwacg6605" path="res://world/resources/tilemap/test_tileset.tres" id="1_81poq"]
+
+[node name="test_world" type="TileMap"]
+tile_set = ExtResource("1_81poq")
+format = 2
+layer_0/tile_data = PackedInt32Array(1, 0, 10, 2, 65536, 10, 3, 131072, 10, 4, 196608, 10, 65542, 131072, 11)
