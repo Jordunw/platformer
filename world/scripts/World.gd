@@ -3,6 +3,8 @@ extends Node2D
 @onready var map1 = load("res://world/scenes/World1.tscn").instantiate();
 @onready var map2 = load("res://world/scenes/World2.tscn").instantiate();
 
+@onready var rustic_world = load("res://world/scenes/Rustic_World.tscn").instantiate();
+
 var map_no = 1;
 
 var portal : Rect2i = Rect2i(Vector2(73,-1), Vector2(2,4));
