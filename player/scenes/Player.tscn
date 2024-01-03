@@ -1,20 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2gcmh7dumwx3"]
+[gd_scene load_steps=7 format=3 uid="uid://c2gcmh7dumwx3"]
 
-[ext_resource type="Script" path="res://world/scripts/Player.gd" id="1_dga1u"]
+[ext_resource type="Script" path="res://player/scripts/Player.gd" id="1_irr5d"]
 [ext_resource type="Script" path="res://player/scripts/PlayerCamera.gd" id="2_7pxin"]
 [ext_resource type="SpriteFrames" uid="uid://dc06pdl5scwch" path="res://player/resources/spritesheet/PlayerFrames.tres" id="2_o2g6m"]
+[ext_resource type="Texture2D" uid="uid://dwj22a7lvdjqu" path="res://player/resources/img/rifle.png" id="3_d8lwo"]
 [ext_resource type="Texture2D" uid="uid://du1e5wrby4gc3" path="res://world/resources/lighting/light.png" id="3_kr31t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xs67"]
 size = Vector2(12, 27)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_dga1u")
+script = ExtResource("1_irr5d")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = ExtResource("2_o2g6m")
-animation = &"running"
+animation = &"idle"
+
+[node name="GunImage" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 4)
+texture = ExtResource("3_d8lwo")
+offset = Vector2(4.5, 0)
+
+[node name="CasingEjectionPoint" type="Marker2D" parent="GunImage"]
+position = Vector2(-2, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)
