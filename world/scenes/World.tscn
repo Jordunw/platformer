@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2gcmh7dumwx3" path="res://player/scenes/Player.tscn" id="1_6e8kt"]
 [ext_resource type="Script" path="res://world/scripts/World.gd" id="1_iv0yp"]
 [ext_resource type="Script" path="res://world/scripts/TerrainDetector.gd" id="3_oa40h"]
-[ext_resource type="PackedScene" uid="uid://xfw0j1j67fah" path="res://world/scenes/test_world.tscn" id="4_y3uty"]
+[ext_resource type="PackedScene" uid="uid://herk6n4do6ri" path="res://world/scenes/test_world.tscn" id="4_y3uty"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_au060"]
 size = Vector2(16, 32)
