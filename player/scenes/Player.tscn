@@ -31,6 +31,11 @@ position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_8xs67")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_speed = 50.0
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
 script = ExtResource("2_7pxin")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
