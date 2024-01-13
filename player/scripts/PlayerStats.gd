@@ -8,19 +8,9 @@ var health : int;	# current health
 @export var defense : int;
 @export var attack : int;	
 
-@export_category("Movement Stats")
-@export var horizontal_speed : float;	# side to side movement speed
-@export var jump_height : float;		# jump height multiplier
-@export var gravity_mod : float;		# player gravity multiplier
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 # Deal damage to the player

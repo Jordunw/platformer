@@ -5,6 +5,8 @@ extends CharacterBody2D
 var movementState: PlayerMovementState = PlayerMovementState.new();
 var raycasts: Array = [RayCast2D.new(), RayCast2D.new(), RayCast2D.new(), RayCast2D.new()];
 
+signal wall_collision
+
 func _ready():
 	add_child(movementState);
 	var sprite: AnimatedSprite2D = get_child(0) as AnimatedSprite2D;
@@ -23,7 +25,7 @@ func _physics_process(delta):
 
 			# broadcast collision event
 			# on collision event: stop dash, update state, run particle effects/animations, etc.
-
+			emit_signal("wall_collision", movementState.velocity);
 
 			# add ray casts to handle cases where player hits edge
 			# get vert&horiz movement from velocity vector
