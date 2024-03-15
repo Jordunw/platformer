@@ -16,8 +16,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(portal.has_point(player.position / 16)):
-		remove_child(get_child(1));
-		add_child(map2 if floor(map_no % 2) else map1);
-		map_no += 1;
-		player.position = Vector2(400,-1);
+	pass

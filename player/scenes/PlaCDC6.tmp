@@ -67,9 +67,6 @@ idle_state = NodePath("../idle")
 sprint_state = NodePath("../sprint")
 slide_state = NodePath("../slide")
 grapple_state = NodePath("../grapple")
-DASH_FORCE = 800.0
-DASH_REDUCTION_FACTOR = 6.0
-DASH_TIME = 0.4
 
 [node name="fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "move_state", "slide_state", "crouch_state", "sprint_state", "jump_state", "grapple_state", "dash_state")]
 script = ExtResource("9_r8tav")
@@ -81,15 +78,12 @@ sprint_state = NodePath("../sprint")
 jump_state = NodePath("../jump")
 grapple_state = NodePath("../grapple")
 dash_state = NodePath("../dash")
-FALL_SPEED_MULTI = 1.675
-MAX_FALL_SPEED = 1250
 
 [node name="grapple" type="Node" parent="StateMachine" node_paths=PackedStringArray("dash_state", "fall_state", "jump_state")]
 script = ExtResource("10_m5y4y")
 dash_state = NodePath("../dash")
 fall_state = NodePath("../fall")
 jump_state = NodePath("../jump")
-SLIDE_SPEED = 200
 
 [node name="jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "idle_state", "move_state", "dash_state", "slide_state", "crouch_state", "grapple_state", "sprint_state")]
 script = ExtResource("11_ujadb")
@@ -101,8 +95,6 @@ slide_state = NodePath("../slide")
 crouch_state = NodePath("../crouch")
 grapple_state = NodePath("../grapple")
 sprint_state = NodePath("../sprint")
-jump_force = 475.0
-move_speed = 350.0
 
 [node name="move" type="Node" parent="StateMachine" node_paths=PackedStringArray("dash_state", "fall_state", "idle_state", "jump_state", "crouch_state", "sprint_state")]
 script = ExtResource("12_21g2l")
@@ -134,5 +126,3 @@ move_state = NodePath("../move")
 
 [node name="MoveComponent" type="Node" parent="."]
 script = ExtResource("15_g4h7p")
-JUMP_INPUT_BUFFER = 0.15
-DASH_COOLDOWN = 1.0
